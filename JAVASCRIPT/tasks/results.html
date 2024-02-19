@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+  .main{
+    margin-left: 600px;
+    margin-top: 100px;
+  }
+</style>
+
+<script>
+    function add() {
+        let first = document.getElementById("first")
+        let second = document.getElementById("second")
+        let three = document.getElementById("three")
+        let four = document.getElementById("four")
+        let five = document.getElementById("five")
+        Total = Number(first.value) + Number(second.value) + Number(three.value)+ Number(four.value) + Number(five.value) + Number(six.value)  + Number(seven.value);
+        document.getElementById('total').innerText = Total;
+    }
+    
+
+    function div() {
+        let Total = document.getElementById("total")
+        Per = Number(Total.innerText/350)*100;
+        document.getElementById('percentage').innerText = Per;
+    }
+</script>
+<body>
+    <div class="main">
+        <b style="margin-left: 30px;">Marksheet of information technology</b>
+        <p class="heading">Enter Marks</p>
+        <div class="subject">
+            1.C Language  <input type="text" id="first" required > <br><br>
+            2.C++ Language <input type="text" id="second" required> <br><br>
+            3.database  <input type="text" id="three" required> <br><br>
+            4.HTML <input type="text" id="four" required> <br><br>
+            5.CSS <input type="text" id="five" required> <br><br>
+            6.php <input type="text" id="six" required> <br><br>
+            7.core java <input type="text" id="seven" required> <br><br>
+            <input type="button" onclick="add()" value="total">  <input type="button" onclick="div()" value="percentage"> </td><br><br>
+
+            <tr>
+                <td> <label> Total : </label></td>
+                <td> <label for="" id="total"></label>  /350</td>
+               </tr>
+        
+               <tr>
+                <td> <label> Percentage : </label></td>
+                <td> <label for="" id="percentage"></label> /100 %  </td>
+               </tr>
+
+        </div>
+    </div>
+</html>
